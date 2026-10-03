@@ -2,12 +2,18 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Inicio') {
+        stage('Build') {
             steps {
-                echo 'Pipeline funcionando correctamente'
+                echo 'Compilando proyecto'
+                sh 'mvn clean compile'
             }
         }
-        
+
+        stage('Test') {
+            steps {
+                echo 'Ejecutando las pruebas unitarias'
+                sh 'mvn test'
+            }
+        }
     }
 }
