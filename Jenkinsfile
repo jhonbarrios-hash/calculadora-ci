@@ -1,13 +1,13 @@
 pipeline {
-agent any
+    agent any
  
-stages {
+    stages {
  
-stage('Inicio') {
-steps {
-echo 'Pipeline funcionando correctamente'
-}
-}
+        stage('Inicio') {
+            steps {
+                echo 'Pipeline funcionando correctamente'
+            }
+        }
  
-}
+    }
 }
